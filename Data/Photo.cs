@@ -9,14 +9,17 @@ namespace MyPhotoshop
 			Width = width;
 			Height = height;
 			Data = new Pixel[width, height];
-            for (int x = 0; x < width; ++x)
-                for (int y = 0; y < height; ++y)
-                    Data[x, y] = new Pixel();
+        }
+
+        public Pixel this[int x, int y]
+        {
+            get { return Data[x, y]; }
+            set { Data[x, y] = value; }
         }
 
         public readonly int Width;
         public readonly int Height;
-        public readonly Pixel[,] Data;
+        private readonly Pixel[,] Data;
     }
 }
 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MyPhotoshop
 {
-    public class Pixel
+    public struct Pixel
     {
         public double Check(double value)
         {
