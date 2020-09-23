@@ -7,6 +7,15 @@ namespace MyPhotoshop
 {
     public struct Pixel
     {
+        public Pixel(double r, double g, double b)
+        {
+            //Хак для того, чтобы использовать свойства внутри конструктора
+            this.r = this.b = this.g = 0;
+
+            R = r;
+            G = g;
+            B = b;
+        }
         public double Check(double value)
         {
             if (value > 1 || value < 0) 

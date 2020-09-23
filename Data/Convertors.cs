@@ -14,12 +14,10 @@ namespace MyPhotoshop
 				for (int y=0; y<bmp.Height; y++)
 				{
 					var pixel = bmp.GetPixel(x,y);
-					photo[x, y] = new Pixel
-					{
-						R = (double)pixel.R / 255,
-						G = (double)pixel.G / 255,
-						B = (double)pixel.B / 255
-					};
+					photo[x, y] = new Pixel(
+						(double)pixel.R / 255, 
+						(double)pixel.G / 255, 
+						(double)pixel.B / 255);
                 };					
             }
 			return photo;
